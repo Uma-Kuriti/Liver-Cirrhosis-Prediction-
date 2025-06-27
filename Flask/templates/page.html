@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LiverAI - Advanced Liver Disease Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body id="page-top">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="#page-top">
+                <i class="fas fa-heartbeat me-2"></i>
+                <span class="brand-text">LiverAI</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#page-top">
+                            <i class="fas fa-home me-1"></i>Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">
+                            <i class="fas fa-info-circle me-1"></i>About
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">
+                            <i class="fas fa-brain me-1"></i>Prediction
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">
+                            <i class="fas fa-envelope me-1"></i>Contact
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section" id="page-top">
+        <div class="hero-background">
+            <div class="hero-particles"></div>
+        </div>
+        <div class="container">
+            <div class="row align-items-center min-vh-100">
+                <div class="col-lg-6">
+                    <div class="hero-content">
+                        <div class="hero-badge animate-fade-in">
+                            <i class="fas fa-award me-2"></i>
+                            Medical Grade AI Technology
+                        </div>
+                        <h1 class="hero-title animate-slide-up">
+                            Revolutionizing
+                            <span class="gradient-text">Liver Care</span>
+                            with AI
+                        </h1>
+                        <p class="hero-description animate-slide-up">
+                            Liver cirrhosis is a chronic and progressive liver disease marked by irreversible scarring of liver tissue. 
+                            Our advanced machine learning system provides early detection and accurate prognosis, enabling timely medical intervention 
+                            and improved patient outcomes.
+                        </p>
+                        <div class="hero-actions animate-slide-up">
+                            <a href="#about" class="btn btn-primary btn-lg me-3">
+                                <i class="fas fa-play me-2"></i>
+                                Learn More
+                            </a>
+                            <a href="{{ url_for('prediction_page') }}" class="btn btn-outline-light btn-lg">
+                                <i class="fas fa-brain me-2"></i>
+                                Start Prediction
+                            </a>
+                        </div>
+                        <div class="hero-stats animate-fade-in">
+                            <div class="stat-item">
+                                <div class="stat-number">95%</div>
+                                <div class="stat-label">Accuracy Rate</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">10K+</div>
+                                <div class="stat-label">Predictions Made</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">24/7</div>
+                                <div class="stat-label">Available</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="hero-visual">
+                        <div class="medical-illustration">
+                            <div class="floating-element liver-icon">
+                                <i class="fas fa-user-md"></i>
+                                <span>AI Analysis</span>
+                            </div>
+                            <div class="floating-element data-icon">
+                                <i class="fas fa-chart-line"></i>
+                                <span>Real-time Results</span>
+                            </div>
+                            <div class="floating-element security-icon">
+                                <i class="fas fa-shield-alt"></i>
+                                <span>Secure & Private</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="about-image">
+                        <div class="image-container">
+                            <div class="medical-bg"></div>
+                            <div class="floating-stats">
+                                <div class="stat-card">
+                                    <i class="fas fa-microscope"></i>
+                                    <span>Advanced Analytics</span>
+                                </div>
+                                <div class="stat-card">
+                                    <i class="fas fa-heartbeat"></i>
+                                    <span>Real-time Monitoring</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="about-content">
+                        <div class="section-badge">
+                            <i class="fas fa-stethoscope me-2"></i>
+                            About Our Technology
+                        </div>
+                        <h2 class="section-title">
+                            Transforming Liver Disease Detection with 
+                            <span class="gradient-text">Machine Learning</span>
+                        </h2>
+                        <p class="section-description">
+                            Revolutionary advancements in machine learning techniques have transformed liver care by enabling 
+                            the prediction of liver cirrhosis with unprecedented accuracy and speed.
+                        </p>
+                        
+                        <div class="feature-list">
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-database"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h4>Comprehensive Data Analysis</h4>
+                                    <p>Our AI analyzes vast amounts of patient data, including medical records, laboratory results, and genetic profiles to identify patterns and markers.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-shield-alt"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h4>Privacy & Security First</h4>
+                                    <p>While challenges like data quality and privacy are addressed through advanced encryption and secure processing protocols.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h4>Improved Patient Outcomes</h4>
+                                    <p>The integration of machine learning techniques holds great promise for revolutionizing liver care and improving patient outcomes.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <div class="section-badge">
+                    <i class="fas fa-cogs me-2"></i>
+                    Our Services
+                </div>
+                <h2 class="section-title">
+                    Advanced Liver Disease 
+                    <span class="gradient-text">Prediction Platform</span>
+                </h2>
+                <p class="section-description">
+                    Utilize cutting-edge machine learning algorithms to predict liver health and detect potential issues early, 
+                    ensuring timely medical intervention and better health outcomes.
+                </p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3>AI-Powered Analysis</h3>
+                        <p>Advanced neural networks analyze complex medical data patterns to provide accurate liver health predictions.</p>
+                        <div class="service-features">
+                            <span class="feature-tag">Machine Learning</span>
+                            <span class="feature-tag">Real-time</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <h3>Comprehensive Reports</h3>
+                        <p>Detailed analysis reports with risk assessment, recommendations, and follow-up guidelines for healthcare providers.</p>
+                        <div class="service-features">
+                            <span class="feature-tag">Detailed Reports</span>
+                            <span class="feature-tag">Risk Assessment</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h3>Early Detection</h3>
+                        <p>Identify potential liver issues before symptoms appear, enabling preventive care and better treatment outcomes.</p>
+                        <div class="service-features">
+                            <span class="feature-tag">Prevention</span>
+                            <span class="feature-tag">Early Warning</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-5">
+                <a href="{{ url_for('prediction_page') }}" class="btn btn-primary btn-lg">
+                    <i class="fas fa-rocket me-2"></i>
+                    Start Your Prediction Now
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <div class="section-badge">
+                    <i class="fas fa-envelope me-2"></i>
+                    Get In Touch
+                </div>
+                <h2 class="section-title">
+                    Contact Our 
+                    <span class="gradient-text">Medical AI Team</span>
+                </h2>
+                <p class="section-description">
+                    Have questions about our liver disease prediction system? Our team of medical AI experts is here to help.
+                </p>
+            </div>
+            
+            <div class="row g-5">
+                <div class="col-lg-6">
+                    <div class="contact-form-container">
+                        <form action="/contact" method="post" class="contact-form">
+                            <div class="form-group">
+                                <label class="form-label">Full Name</label>
+                                <input type="text" name="name" class="form-control" placeholder="Enter your full name" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-label">Email Address</label>
+                                <input type="email" name="email" class="form-control" placeholder="Enter your email address" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-label">Subject</label>
+                                <select name="subject" class="form-control" required>
+                                    <option value="">Select a subject</option>
+                                    <option value="general">General Inquiry</option>
+                                    <option value="technical">Technical Support</option>
+                                    <option value="medical">Medical Questions</option>
+                                    <option value="partnership">Partnership</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-label">Message</label>
+                                <textarea name="message" rows="5" class="form-control" placeholder="Tell us how we can help you..." required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary btn-lg w-100">
+                                <i class="fas fa-paper-plane me-2"></i>
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="contact-info">
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="info-content">
+                                <h4>Our Location</h4>
+                                <p>Medical AI Research Center<br>
+                                Jogeshwari West, Mumbai<br>
+                                Maharashtra 400047, India</p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="info-content">
+                                <h4>Phone Number</h4>
+                                <p>+91 98765 43210<br>
+                                Available 24/7 for emergencies</p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="info-content">
+                                <h4>Email Address</h4>
+                                <p>support@liverai.com<br>
+                                medical@liverai.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="info-content">
+                                <h4>Working Hours</h4>
+                                <p>Monday - Friday: 9:00 AM - 6:00 PM<br>
+                                Emergency Support: 24/7</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="map-container">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15076.89592087332!2d72.8319697277345!3d19.14167056419224!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b63aceef0c69%3A0x2aa80cf2287dfa3b!2sJogeshwari%20West%2C%20Mumbai%2C%20Maharashtra%20400047!5e0!3m2!1sen!2sin!4v1635757298406!5m2!1sen!2sin" 
+                            allowfullscreen="" 
+                            loading="lazy"
+                            class="map">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="footer-brand">
+                            <i class="fas fa-heartbeat me-2"></i>
+                            <span>LiverAI</span>
+                        </div>
+                        <p class="footer-description">
+                            Revolutionizing liver care through advanced AI technology and machine learning algorithms 
+                            for early detection and accurate prediction of liver diseases.
+                        </p>
+                        <div class="footer-social">
+                            <a href="#" class="social-link">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-2 col-md-6">
+                        <h5 class="footer-title">Quick Links</h5>
+                        <ul class="footer-links">
+                            <li><a href="#page-top">Home</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#services">Services</a></li>
+                            <li><a href="{{ url_for('prediction_page') }}">Prediction</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="col-lg-2 col-md-6">
+                        <h5 class="footer-title">Support</h5>
+                        <ul class="footer-links">
+                            <li><a href="#contact">Contact</a></li>
+                            <li><a href="#">Help Center</a></li>
+                            <li><a href="#">Documentation</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="col-lg-4">
+                        <h5 class="footer-title">Newsletter</h5>
+                        <p class="footer-newsletter-text">
+                            Stay updated with the latest developments in medical AI and liver disease research.
+                        </p>
+                        <form class="newsletter-form">
+                            <div class="input-group">
+                                <input type="email" class="form-control" placeholder="Enter your email">
+                                <button class="btn btn-primary" type="submit">
+                                    <i class="fas fa-paper-plane"></i>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <p>&copy; 2024 LiverAI. All rights reserved.</p>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+                        <p>Medical AI Technology | Powered by Advanced Machine Learning</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+</html>
+
